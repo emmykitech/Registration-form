@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    --Blue: hsl(248, 32%, 49%);
+    --Dark-Blue: hsl(249, 10%, 26%);
+    --Grayish-Blue: hsl(246, 25%, 77%);
+    --Red: hsl(0, 100%, 74%);
+    --Green: hsl(154, 59%, 51%);
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("./images/bg-intro-desktop.png");
+    background-color: var(--Red);
+}
+
+body {
+    padding: 20px;
+}
+
+.main-wrapper {
+    max-width: 1110px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.left-side {
+    width: 490px;
+    margin-right: 70px;
+}
+
+.right-side {
+    width: 540px;
+}
+
+.left-side h1 {
+    line-height: 1.1;
+    width: 421px;
+    color: white;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.left-side p {
+    font-size: 1rem;
+    color: white;
+    margin-top: 30px;
+    width: 500px;
+    line-height: 1.5;
+}
+
+
+.right-side .heading {
+    background-color: var(--Blue);
+    color: white;
+    text-align: center;
+    padding: 20px 0px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    box-shadow: 0px 6px 1px 0px hsla(249, 10%, 26%, 0.673);
+}
+
+.right-side .heading span {
+    font-weight: 200;
+}
+
+form {
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 40px;
+}
+
+input {
+    padding: 20px;
+    width: 100%;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    border: 1px solid var(--Grayish-Blue);
+    font-weight: 700;
+    font-size: 16px;
+    outline-color: var(--Dark-Blue);
+}
+
+input[type=submit] {
+    background-color: var(--Green);
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 16px;
+    box-shadow: 0px 6px 1px 0px hsla(249, 10%, 26%, 0.673);
+}
+
+input[type=submit]:active {
+    background-color: var(--Green);
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 16px;
+    box-shadow: none;
+    position: relative;
+    top: 6px;
+}
+
+form p {
+    text-align: center;
+    font-size: 10px;
+    color: var(--Grayish-Blue);
+}
+
+form p span {
+    color: var(--Red);
+    font-weight: bold;
+    text-align: center;
+}
+
+
+.input {
+    position: relative;
+}
+
+/* .input img {
+    display: none;
+} */
+
+/* input:invalid {
+    color: var(--Red);
+    border: 2px solid var(--Red);
+    outline: none;
+}
+
+input:invalid::placeholder {
+    color: var(--Red);
+} */
+/* input:invalid + span#icon::before {
+    content: url("./images/icon-error.svg");
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+
+#error {
+    position: relative;
+    display: block;
+    text-align: right;
+    top: -10px;
+    font-size: 12px;
+    font-style: italic;
+    color: var(--Red);
+    display: none;
+}
+
+input:invalid ~ span#error {
+    display: block;
+} */
+
+.input {
+    position: relative;
+}
+
+.input img {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    display: none;
+}
+
+.input p {
+    color: var(--Red);
+    font-size: 12px;
+    text-align: right;
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    display: none;
+}
+
+input:invalid {
+    outline-color: var(--Red);
+}
+
+input::placeholder:invalid {
+    color: var(--Red);
+}
+
+input:focus:invalid~* {
+    display: block;
+}
+
+@media (max-width: 1120px) {
+    body {
+        padding: 0px 20px;
+        height: 1000px;
+        justify-content: flex-start;
+    }
+
+    main {
+        width: 100%;
+    }
+
+    main .main-wrapper {
+        flex-direction: column;
+    }
+
+    .left-side {
+        width: 100%;
+        margin: 0px;
+    }
+
+    .right-side {
+        text-align: center;
+        margin: 40px 0px 0px 0px;
+        width: 100%;
+    }
+
+    .left-side h1 {
+        text-align: center;
+        width: 100%;
+        font-size: 40px;
+    }
+
+    .left-side p {
+        text-align: center;
+        width: 100%;
+    }
+
+    .right-side .heading {
+        font-size: 16px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    input {
+        font-size: 14px;
+    }
+}
